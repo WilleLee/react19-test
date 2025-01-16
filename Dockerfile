@@ -16,6 +16,8 @@ COPY --from=build /app/package.json ./
 COPY --from=build /app/yarn.lock ./
 COPY --from=build /app/.yarnrc.yml ./
 COPY --from=build /app/.yarn ./.yarn
+
+COPY --from=build /app/apps/hook-form/package.json ./apps/hook-form/package.json
 COPY --from=build /app/apps/hook-form/.next ./apps/hook-form/.next
 COPY --from=build /app/apps/hook-form/public ./apps/hook-form/public
 COPY --from=build /app/node_modules ./node_modules
