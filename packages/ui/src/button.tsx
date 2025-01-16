@@ -1,6 +1,6 @@
-import { type ComponentPropsWithoutRef } from "react";
+import { type ComponentPropsWithoutRef } from 'react';
 
-type Props = ComponentPropsWithoutRef<"button">;
+type Props = ComponentPropsWithoutRef<'button'>;
 
 const button = ({ children, ...rest }: Props) => {
   return <button {...rest}>{children}</button>;

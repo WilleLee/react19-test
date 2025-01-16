@@ -1,4 +1,4 @@
-import PlainTextEditor from "./plain-text-editor";
+import PlainTextEditor from './plain-text-editor';
 
 const PlainReact = () => {
   return (

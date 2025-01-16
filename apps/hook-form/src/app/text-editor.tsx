@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { Input } from "@monorepo/ui";
-import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { Input } from '@monorepo/ui';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 const fetchData = async (text: string) => {
   await new Promise((resolve) => setTimeout(resolve, 1500));
@@ -19,14 +19,14 @@ const TextEditor = () => {
   const onSubmit = async (data: FormValues) => {
     setIsPending(true);
     const text = await fetchData(data.text);
-    console.log("text : ", text);
+    console.log('text : ', text);
     setIsPending(false);
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <Input {...register("text")} />
+      <Input {...register('text')} />
       <button type="submit" disabled={isPending}>
-        {isPending ? "Pending..." : "Submit"}
+        {isPending ? 'Pending...' : 'Submit'}
       </button>
     </form>
   );
