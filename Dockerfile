@@ -10,4 +10,4 @@ RUN yarn hook-form build
 
 EXPOSE 3000
 
-CMD ["yarn", "workspace", "@monorepo/hook-form", "start"]
+CMD ["yarn", "hook-form", "start"]
