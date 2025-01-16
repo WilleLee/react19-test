@@ -18,8 +18,7 @@ COPY --from=build /app/.yarnrc.yml ./
 COPY --from=build /app/.yarn ./.yarn
 COPY --from=build /app/apps/hook-form/.next ./apps/hook-form/.next
 COPY --from=build /app/apps/hook-form/public ./apps/hook-form/public
-
-RUN yarn workspaces focus @monorepo/hook-form
+COPY --from=build /app/node_modules ./node_modules
 
 EXPOSE 3000
 
