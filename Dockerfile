@@ -19,7 +19,7 @@ COPY --from=build /app/.yarn ./.yarn
 COPY --from=build /app/apps/hook-form/.next ./apps/hook-form/.next
 COPY --from=build /app/apps/hook-form/public ./apps/hook-form/public
 
-RUN yarn install --frozen-lockfile
+RUN yarn install --production
 
 EXPOSE 3000
 
