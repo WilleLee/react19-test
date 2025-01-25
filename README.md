@@ -2,7 +2,7 @@
 
 ## Description
 
-Here are some testable features of the React19 project.
+Here are some testable features of React 19 and Next 15.
 
 ## Features
 
@@ -10,3 +10,7 @@ Here are some testable features of the React19 project.
 
 - tested whether the `react-hook-form` library works properly without any components with forwarded refs.
 - tested whether the features of react 19 (e.g `useActionState`) can be an useful alternative to the `react-hook-form` library.
+
+### internationalization
+
+- implemented the internationalization feature using Next.js's built-in support for i18n.
