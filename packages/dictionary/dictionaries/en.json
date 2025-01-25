@@ -1,0 +1,17 @@
+{
+  "home": {
+    "title": "Home",
+    "nav": {
+      "setting": "Setting"
+    }
+  },
+  "setting": {
+    "title": "Setting",
+    "description": "This is a setting page.",
+    "language": {
+      "title": "Language",
+      "ko": "한국어",
+      "en": "English"
+    }
+  }
+}
