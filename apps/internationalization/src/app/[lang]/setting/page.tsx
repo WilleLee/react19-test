@@ -1,8 +1,10 @@
-import { getDictionary } from '@monorepo/dictionary';
-import Link from 'next/link';
-import { type AppLocale } from '@monorepo/shared';
+import { type ReactNode } from 'react';
 
-const Page = async ({ params }: { params: Promise<{ lang: AppLocale }> }) => {
+import { getDictionary } from '@monorepo/dictionary';
+import { type AppLocale } from '@monorepo/shared';
+import Link from 'next/link';
+
+export default async function Page({ params }: { params: Promise<{ lang: AppLocale }> }): Promise<ReactNode> {
   const { lang } = await params;
   const dict = await getDictionary(lang);
   return (
@@ -16,6 +18,4 @@ const Page = async ({ params }: { params: Promise<{ lang: AppLocale }> }) => {
       </div>
     </div>
   );
-};
-
-export default Page;
+}

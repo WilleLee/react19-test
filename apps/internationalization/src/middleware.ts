@@ -2,11 +2,11 @@ import { NextRequest, NextResponse } from 'next/server';
 
 const locales = (process.env.APP_LOCALES as string).split(',');
 
-const checkIfPathnameHasLocale = (pathname: string) => {
+const checkIfPathnameHasLocale = (pathname: string): boolean => {
   return locales.some((locale) => pathname.startsWith(`/${locale}`));
 };
 
-export function middleware(request: NextRequest) {
+export function middleware(request: NextRequest): NextResponse<unknown> {
   const pathname = request.nextUrl.pathname;
 
   if (checkIfPathnameHasLocale(pathname)) {
