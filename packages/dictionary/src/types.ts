@@ -1,8 +1,10 @@
 export type DictionaryMap = {
   home: {
     title: string;
-    nav: {
-      setting: string;
+    counter: {
+      title: string;
+      submit: string;
+      pending: string;
     };
   };
   setting: {
@@ -13,5 +15,9 @@ export type DictionaryMap = {
       ko: string;
       en: string;
     };
+  };
+  nav: {
+    home: string;
+    setting: string;
   };
 };

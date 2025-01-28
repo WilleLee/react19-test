@@ -1,5 +1,12 @@
 {
   "name": "@monorepo/shared",
   "version": "0.1.0",
-  "private": true
+  "private": true,
+  "exports": {
+    "./data": "./src/data/index.ts",
+    "./types": "./src/types/index.ts",
+    "./hooks": "./src/hooks/index.ts",
+    "./providers": "./src/providers/index.ts",
+    ".": "./src/index.ts"
+  }
 }

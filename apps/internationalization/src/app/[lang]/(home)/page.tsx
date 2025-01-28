@@ -1,8 +1,8 @@
 import { type ReactNode } from 'react';
 
 import { getDictionary } from '@monorepo/dictionary';
+import { Counter } from '@monorepo/features';
 import { type AppLocale } from '@monorepo/shared';
-import Link from 'next/link';
 
 const Page = async ({ params }: { params: Promise<{ lang: AppLocale }> }): Promise<ReactNode> => {
   const { lang } = await params;
@@ -10,8 +10,8 @@ const Page = async ({ params }: { params: Promise<{ lang: AppLocale }> }): Promi
 
   return (
     <div>
-      <h2>{dict.home.title}</h2>
-      <Link href={`/${lang}/setting`}>{dict.home.nav.setting}</Link>
+      <h2 className="text-red-600">{dict.home.title}</h2>
+      <Counter />
     </div>
   );
 };

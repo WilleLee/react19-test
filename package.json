@@ -12,8 +12,11 @@
   },
   "dependencies": {
     "@monorepo/dictionary": "workspace:*",
+    "@monorepo/features": "workspace:*",
+    "@monorepo/nav": "workspace:*",
     "@monorepo/shared": "workspace:*",
     "@monorepo/ui": "workspace:*",
+    "@monorepo/utils": "workspace:*",
     "next": "15.1.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

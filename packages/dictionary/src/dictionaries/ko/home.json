@@ -1,0 +1,8 @@
+{
+  "title": "홈",
+  "counter": {
+    "title": "카운터",
+    "submit": "증가",
+    "pending": "처리 중..."
+  }
+}

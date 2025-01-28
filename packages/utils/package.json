@@ -1,8 +1,9 @@
 {
-  "name": "@monorepo/dictionary",
+  "name": "@monorepo/utils",
   "version": "0.1.0",
   "private": true,
   "exports": {
+    "./locale": "./src/locale/index.ts",
     ".": "./src/index.ts"
   }
 }

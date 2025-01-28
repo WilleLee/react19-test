@@ -1,6 +1,6 @@
 import { type ReactNode } from 'react';
 
-import { type AppLocale } from '@monorepo/shared';
+import type { AppLocale } from '@monorepo/shared/types';
 import type { Metadata } from 'next';
 import { Noto_Sans_KR } from 'next/font/google';
 import './globals.css';
@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   description: 'An example of internationalization in a Next.js app',
 };
 
+// 빌드 타임에 정적 페이지를 생성
 export async function generateStaticParams(): Promise<{ lang: AppLocale }[]> {
   return [{ lang: 'ko' }, { lang: 'en' }];
 }

@@ -1,8 +1,9 @@
 {
-  "name": "@monorepo/dictionary",
+  "name": "@monorepo/features",
   "version": "0.1.0",
   "private": true,
   "exports": {
+    "./counter": "./src/counter/index.tsx",
     ".": "./src/index.ts"
   }
 }
