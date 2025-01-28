@@ -1,23 +1,29 @@
-export type DictionaryMap = {
-  home: {
+type HomeDictionary = {
+  title: string;
+  counter: {
     title: string;
-    counter: {
-      title: string;
-      submit: string;
-      pending: string;
-    };
+    submit: string;
+    pending: string;
   };
-  setting: {
+};
+
+type SettingDictionary = {
+  title: string;
+  description: string;
+  language: {
     title: string;
-    description: string;
-    language: {
-      title: string;
-      ko: string;
-      en: string;
-    };
+    ko: string;
+    en: string;
   };
-  nav: {
-    home: string;
-    setting: string;
-  };
+};
+
+type NavDictionary = {
+  home: string;
+  setting: string;
+};
+
+export type Dictionary = {
+  home: HomeDictionary;
+  setting: SettingDictionary;
+  nav: NavDictionary;
 };

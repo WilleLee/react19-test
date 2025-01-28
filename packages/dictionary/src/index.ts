@@ -1,8 +1,8 @@
 import type { AppLocale } from '@monorepo/shared/types';
 
-import { type DictionaryMap } from './types';
+import { type Dictionary } from './types';
 
-const dictionaries: Record<AppLocale, () => Promise<DictionaryMap>> = {
+const dictionaries: Record<AppLocale, () => Promise<Dictionary>> = {
   ko: async () => {
     const [home, setting, nav] = await Promise.all([
       import('./dictionaries/ko/home.json').then((module) => module.default),
@@ -31,11 +31,11 @@ const dictionaries: Record<AppLocale, () => Promise<DictionaryMap>> = {
   },
 };
 
-const getDictionary = (locale: AppLocale): Promise<DictionaryMap> => {
+const getDictionary = (locale: AppLocale): Promise<Dictionary> => {
   return dictionaries[locale]();
 };
 
-const defaultDictionary: DictionaryMap = {
+const defaultDictionary: Dictionary = {
   home: {
     title: '홈',
     counter: {
@@ -59,4 +59,4 @@ const defaultDictionary: DictionaryMap = {
   },
 };
 
-export { getDictionary, type DictionaryMap, defaultDictionary };
+export { getDictionary, type Dictionary, defaultDictionary };

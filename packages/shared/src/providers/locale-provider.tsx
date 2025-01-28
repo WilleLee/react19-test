@@ -2,13 +2,13 @@
 
 import { createContext, type ReactNode, type PropsWithChildren } from 'react';
 
-import { type DictionaryMap, defaultDictionary } from '@monorepo/dictionary';
+import { type Dictionary, defaultDictionary } from '@monorepo/dictionary';
 
 import type { AppLocale } from '../types';
 
 export type LocaleContextType = {
   locale: AppLocale;
-  dictionary: DictionaryMap;
+  dictionary: Dictionary;
 };
 
 export const LocaleContext = createContext<LocaleContextType>({
@@ -22,7 +22,7 @@ const LocaleProvider = ({
   dictionary,
 }: PropsWithChildren<{
   lang: AppLocale;
-  dictionary: DictionaryMap;
+  dictionary: Dictionary;
 }>): ReactNode => {
   return (
     <LocaleContext.Provider
