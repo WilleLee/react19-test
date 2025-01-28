@@ -1,3 +1,7 @@
+import { appLocale } from '../data';
+
+export type AppLocale = (typeof appLocale)[number];
+
 type HomeDictionary = {
   title: string;
   counter: {

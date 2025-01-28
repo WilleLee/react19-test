@@ -2,9 +2,9 @@
 
 import { createContext, type ReactNode, type PropsWithChildren } from 'react';
 
-import { type Dictionary, defaultDictionary } from '@monorepo/dictionary';
+import { defaultDictionary } from '@monorepo/dictionary';
 
-import type { AppLocale } from '../types';
+import type { AppLocale, Dictionary } from '../types';
 
 export type LocaleContextType = {
   locale: AppLocale;

@@ -1,14 +1,15 @@
 'use client';
 
+import { type ReactNode, useActionState } from 'react';
+
 import { Button, Input } from '@monorepo/ui';
-import { useActionState } from 'react';
 
 type FormState = {
   error?: string;
   text: string;
 };
 
-const fetchText = async (text: string) => {
+const fetchText = async (text: string): Promise<string> => {
   await new Promise((resolve) => setTimeout(resolve, 1500));
 
   if (text.length < 4) {
@@ -37,7 +38,7 @@ const textAction = async (prevState: FormState, formData?: FormData): Promise<Fo
   }
 };
 
-const PlainTextEditor = () => {
+const PlainTextEditor = (): ReactNode => {
   const [formState, formAction, isPending] = useActionState<FormState>(textAction, { text: '' });
   const { error, text } = formState;
   return (

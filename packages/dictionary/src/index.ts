@@ -1,6 +1,4 @@
-import type { AppLocale } from '@monorepo/shared/types';
-
-import { type Dictionary } from './types';
+import type { AppLocale, Dictionary } from '@monorepo/shared/types';
 
 const dictionaries: Record<AppLocale, () => Promise<Dictionary>> = {
   ko: async () => {
@@ -59,4 +57,4 @@ const defaultDictionary: Dictionary = {
   },
 };
 
-export { getDictionary, type Dictionary, defaultDictionary };
+export { getDictionary, defaultDictionary };
