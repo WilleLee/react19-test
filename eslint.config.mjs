@@ -106,6 +106,7 @@ export default tseslint.config(
         },
       ],
       'import/no-unresolved': 'off',
+      'import/no-anonymous-default-export': 'off',
     },
   },
 );

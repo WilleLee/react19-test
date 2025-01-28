@@ -1,4 +1,2 @@
-import Input from './input';
-import Button from './button';
-
-export { Input, Button };
+export * from './components';
+export * from './utils';

@@ -1,4 +1,4 @@
-import sharedConfig from '../../tailwind.config';
+import sharedConfig from '../../tailwind.config.js';
 
 export default {
   ...sharedConfig,
