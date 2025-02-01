@@ -6,8 +6,5 @@
     "./components": "./src/components/index.ts",
     "./utils": "./src/utils/index.ts",
     ".": "./src/index.ts"
-  },
-  "dependencies": {
-    "@radix-ui/react-slot": "^1.1.1"
   }
 }

@@ -9,7 +9,7 @@ export default async function Page({ params }: { params: Promise<{ lang: AppLoca
   const dict = await getDictionary(lang);
   return (
     <div>
-      <h2>{dict.setting.title}</h2>
+      <h2 className="text-red-500">{dict.setting.title}</h2>
       <p>{dict.setting.description}</p>
       <div>
         <h3>{dict.setting.language.title}</h3>

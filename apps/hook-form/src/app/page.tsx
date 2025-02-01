@@ -1,8 +1,7 @@
 import { type ReactNode } from 'react';
 
+import TextEditor from '@app/text-editor';
 import Link from 'next/link';
-
-import TextEditor from '@/app/text-editor';
 
 export default function Home(): ReactNode {
   return (

@@ -10,7 +10,7 @@ const Page = async ({ params }: { params: Promise<{ lang: AppLocale }> }): Promi
 
   return (
     <div>
-      <h2 className="text-red-600">{dict.home.title}</h2>
+      <h2>{dict.home.title}</h2>
       <Counter />
     </div>
   );

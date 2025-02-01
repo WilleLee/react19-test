@@ -16,7 +16,7 @@ const Counter = (): ReactNode => {
   return (
     <form action={action}>
       <h1>{dictionary.home.counter.title}</h1>
-      <Input error="hj" />
+      <Input />
       <Badge>{count}</Badge>
       <Button type="submit" disabled={isPending}>
         {isPending ? dictionary.home.counter.pending : dictionary.home.counter.submit}
